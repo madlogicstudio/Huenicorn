@@ -28,14 +28,10 @@ export const Footer = ({isDark}: FooterProps) => {
                     </div>
                 </div> 
 
-                <div className={`${isMobile? "pt-6" : ""}
-                    flex flex-row gap-3 justify-end`}>
-                    <i className={`${isMobile? "text-2xl" : "text-3xl"}
-                        bxl bx-facebook hover-text cursor-pointer`}/>
-                    <i className={`${isMobile? "text-2xl" : "text-3xl"}
-                        bxl bx-messenger hover-text cursor-pointer`}/>
-                    <i className={`${isMobile? "text-2xl" : "text-3xl"}
-                        bxl bx-github hover-text cursor-pointer`}/>
+                <div className={`flex flex-row gap-3 justify-end`}>
+                    <i className="bxl bx-facebook text-3xl hover-text cursor-pointer" />
+                    <i className="bxl bx-messenger text-3xl hover-text cursor-pointer" />
+                    <i className="bxl bx-github text-3xl hover-text cursor-pointer" />
                 </div>
             </div>
 
