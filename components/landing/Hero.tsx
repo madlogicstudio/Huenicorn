@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 function Hero() {
 
@@ -20,13 +21,13 @@ function Hero() {
                     Generate palettes, extract colors, convert formats, check accessibility,  and build CSS-ready color tools.   
                 </span>
 
-                <div className="fadeIn lg:flex hidden w-38 items-center justify-between gap-1 text-foreground/80 button-hovered border border-foreground/20 px-4 py-2 rounded-full cursor-pointer
+                <Link href="/free-tools" className="fadeIn lg:flex hidden w-38 items-center justify-between gap-1 text-foreground/80 button-hovered border border-foreground/20 px-4 py-2 rounded-full cursor-pointer
                     hover:text-[#5578C9] hover:border-transparent mb-6">
                     <span className="font-sans font-semibold text-sm ">
                         Explore Tools
                     </span>
                     <ArrowRight size={16} className="" />
-                </div>
+                </Link>
 
             </div>
 
@@ -44,13 +45,13 @@ function Hero() {
                 Generate palettes, extract colors, convert formats, check accessibility,  and build CSS-ready color tools.   
             </span>
 
-            <div className="fadeIn lg:hidden flex w-38 items-center justify-between gap-1 text-foreground/80 button-hovered 
+            <Link href="/free-tools" className="fadeIn lg:hidden flex w-38 items-center justify-between gap-1 text-foreground/80 button-hovered 
                 border border-foreground/20 px-4 py-2 rounded-full cursor-pointer hover:text-[#5578C9] hover:border-transparen mt-6">
                 <span className="font-sans font-semibold text-sm ">
                     Explore Tools
                 </span>
                 <ArrowRight size={16} className="" />
-            </div>
+            </Link>
 
         </div>
 

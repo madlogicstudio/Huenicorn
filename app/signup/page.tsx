@@ -112,7 +112,7 @@ export default function SignupPage() {
                         </h2>
 
                         <p className="mt-3 text-sm leading-6 text-foreground/80 lg:text-left text-center">
-                            Save your favorite colors and palettes.
+                            Save your favorite colors, palettes and unlock more features.
                         </p>
 
                         <Image src="/images/Signup.png" width={220} height={220} alt="Huenicorn" 

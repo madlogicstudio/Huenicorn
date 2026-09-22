@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Huenicorn | Generate palettes, extract colors, convert formats, check accessibility,  and build CSS-ready color tools.",
-  description: "A simple collection of free color tools for designers, developers, and anyone who loves working with color.",
+  description: "A simple collection of free color tools for designers, developers, and anyone who loves working with colors.",
   icons:{
     icon: "/Icon.png"
   }

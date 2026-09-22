@@ -144,3 +144,27 @@ body {
 .idle-float {
   animation: idle-float 3s ease-in-out infinite;
 }
+
+.rainbow-button {
+  background: linear-gradient(
+    110deg,
+    #96B4EB 0%,
+    #F6E06E 50%,
+    #D789B9 100%
+  );
+
+  color: #1A233A;
+}
+
+.color-picker-square,
+.color-picker-square .react-colorful__saturation,
+.color-picker-square .react-colorful__hue,
+.color-picker-square .react-colorful__alpha {
+  border-radius: 0 !important;
+}
+
+.color-picker-square .react-colorful__saturation-pointer,
+.color-picker-square .react-colorful__hue-pointer,
+.color-picker-square .react-colorful__alpha-pointer {
+  border-radius: 0 !important;
+}

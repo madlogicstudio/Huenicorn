@@ -56,7 +56,7 @@ export default function LoginPage() {
                             </p>
 
                             <h2 className="text-center text-3xl font-black tracking-tight sm:text-4xl rainbow-text lg:text-left">
-                                Sign in to Huenicorn
+                                Log in to Huenicorn
                             </h2>
 
                             <p className="mt-3 text-center text-sm leading-6 text-foreground/80 lg:text-left">

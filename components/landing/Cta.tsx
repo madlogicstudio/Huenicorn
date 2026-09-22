@@ -49,13 +49,13 @@ export default function CTA() {
                             </p>
 
                             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                                <div className="fadeIn flex items-center gap-2 text-white px-4 py-2 rounded-full cursor-pointer 
+                                <Link href="/signup" className="fadeIn flex items-center gap-2 text-white px-4 py-2 rounded-full cursor-pointer 
                                     transition duration-300 ease" style={{ backgroundColor: colors[index] }}>
                                     <span className={`font-sans font-semibold text-sm`} >
                                         Get Started
                                     </span>
                                     <ArrowRight size={16} className="" />
-                                </div>
+                                </Link>
                             </div>
                             
                         </div>
