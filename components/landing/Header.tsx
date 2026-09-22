@@ -12,7 +12,7 @@ function Header() {
     const menuRef = useRef<HTMLDivElement>(null);
 
     return (
-        <section className="w-full flex flex-row items-center justify-center gap-3 p-3 border-b border-[var(--border)] bg-background sticky top-0 z-10">
+        <section className="font-sans w-full flex flex-row items-center justify-center gap-3 p-3 border-b border-[var(--border)] bg-background sticky top-0 z-10">
             
             <div className="max-w-[1080px] flex flex-row lg:items-end items-center justify-between w-full">
                 <div className="flex flex-row lg:items-end items-center gap-3">   

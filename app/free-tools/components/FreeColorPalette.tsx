@@ -74,7 +74,7 @@ export const FreeColorPalette = () => {
     };
 
     return (
-        <div className="flex flex-col bg-[var(--card)] lg:p-6 p-3 rounded-lg gap-6">
+        <div className="font-sans flex flex-col bg-[var(--card)] lg:p-6 p-3 rounded-lg gap-6">
 
             <div className="flex flex-row items-start justify-between">
                 <span className="text-foreground font-bold text-3xl">

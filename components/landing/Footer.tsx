@@ -31,7 +31,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="w-full flex flex-col border-t border-foreground/20 bg-card items-center">
+        <footer className="font-sans w-full flex flex-col border-t border-foreground/20 bg-card items-center">
 
             <div className="mx-auto max-w-[1080px] w-full px-3 py-16">
 

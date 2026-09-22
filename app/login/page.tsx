@@ -42,7 +42,7 @@ export default function LoginPage() {
     };
 
     return (
-        <main className="min-h-screen w-full bg-background">
+        <main className="font-sans min-h-screen w-full bg-background">
             <div className="grid min-h-screen lg:grid-cols-2">
 
                 <section className="flex min-h-screen items-center justify-center px-6 py-12 sm:px-10">

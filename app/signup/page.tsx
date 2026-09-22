@@ -62,7 +62,7 @@ export default function SignupPage() {
     };
 
   return (
-    <main className="min-h-screen w-full bg-background">
+    <main className="font-sans min-h-screen w-full bg-background">
 
         <div className="grid min-h-screen lg:grid-cols-2">
 

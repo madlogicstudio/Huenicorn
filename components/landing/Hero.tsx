@@ -7,7 +7,7 @@ import Link from "next/link"
 function Hero() {
 
   return (
-    <section className="w-full flex flex-row items-center justify-center gap-3 p-3">
+    <section className="font-sans w-full flex flex-row items-center justify-center gap-3 p-3">
             
         <div className="lg:h-[600px] h-auto max-w-[1080px] w-full flex lg:flex-row flex-col items-center justify-between lg:gap-0 gap-6 py-6">
 

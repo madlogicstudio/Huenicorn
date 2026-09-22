@@ -19,7 +19,7 @@ export default function CTA() {
     }, []);
 
     return (
-        <section className="w-full flex flex-row items-center justify-center gap-3 p-3 my-6">
+        <section className="font-sans w-full flex flex-row items-center justify-center gap-3 p-3 my-6">
                 
             <div className="relative max-w-[1080px] w-full flex flex-col items-center justify-between">
 
@@ -35,7 +35,7 @@ export default function CTA() {
                     <div className="pointer-events-none absolute -left-20 -top-20 h-48 w-48 rounded-full bg-[#96B4EB]/20 blur-3xl" />
                     <div className="pointer-events-none absolute -bottom-20 -right-20 h-48 w-48 rounded-full bg-[#D789B9]/20 blur-3xl" />
 
-                        <div className="relative">
+                        <div className="font-sans relative">
 
                             <h2 className="mt-3 lg:text-5xl text-4xl font-bold tracking-tight text-foreground hovered cursor-pointer">
                                 Ready to create something

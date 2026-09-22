@@ -10,7 +10,7 @@ import CTA from "@/components/landing/Cta"
 function page() {
 
     return (
-        <div className="w-full flex flex-col items-center"> 
+        <div className="font-sans w-full flex flex-col items-center"> 
             <Header />  
             <div className="max-w-[1080px] w-full">
 

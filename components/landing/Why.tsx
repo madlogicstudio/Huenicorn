@@ -44,7 +44,7 @@ export default function Why() {
     ];
 
     return (
-        <section className="w-full flex flex-row items-center justify-center gap-3 p-3">
+        <section className="font-sans w-full flex flex-row items-center justify-center gap-3 p-3">
                 
             <div className="max-w-[1080px] w-full flex flex-col items-center justify-between my-3">
 

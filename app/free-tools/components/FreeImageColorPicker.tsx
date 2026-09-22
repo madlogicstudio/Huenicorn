@@ -92,7 +92,7 @@ export default function FreeImageColorPicker() {
     };
 
     return (
-        <div className="w-full flex flex-col items-start justify-start cursor-pointer lg:p-6 p-3 gap-3 bg-[var(--card)] rounded-lg">
+        <div className="font-sans w-full flex flex-col items-start justify-start cursor-pointer lg:p-6 p-3 gap-3 bg-[var(--card)] rounded-lg">
 
             <div className="w-full flex flex-row items-start justify-between">
                 <span className="text-foreground font-bold text-3xl">
