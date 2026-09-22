@@ -48,9 +48,6 @@ export default function Why() {
                 
             <div className="max-w-[1080px] w-full flex flex-col items-center justify-between my-3">
 
-                <div className="pointer-events-none absolute left-0 top-1/4 h-72 w-72 rounded-full bg-[#96B4EB]/10 blur-3xl" />
-                <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#D789B9]/10 blur-3xl" />
-
                 <div className="relative mx-auto max-w-7xl px-3 lg:px-8">
                     
                     <div className="mx-auto text-center">
@@ -76,7 +73,7 @@ export default function Why() {
                             const Icon = reason.icon;
 
                             return (
-                                <div key={reason.title} className="group relative overflow-hidden rounded-lg border border-foreground/20 bg-card p-6 
+                                <div key={reason.title} className="group relative bg-[var(--card)] overflow-hidden rounded-lg border border-foreground/20 bg-card p-6 
                                     transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer">
                                     
                                     <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full opacity-10 blur-3xl transition-opacity duration-300 group-hover:opacity-25"

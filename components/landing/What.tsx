@@ -28,7 +28,7 @@ export default function What() {
 
                     <div className="relative">
 
-                        <div className="relative overflow-hidden rounded-lg border border-foreground/20 p-5 shadow-xl py-12">
+                        <div className="relative bg-[var(--card)] overflow-hidden rounded-lg border border-foreground/20 p-5 shadow-xl py-12">
 
                             <div className="flex items-center justify-between border-b border-foreground/20 pb-4">
 

@@ -6,6 +6,8 @@ import What from "@/components/landing/What"
 import Why from "@/components/landing/Why"
 import CTA from "@/components/landing/Cta"
 import Footer from "@/components/landing/Footer"
+import { useEffect, useState } from "react"
+import Loading from "./loading"
 
 function page() {
   return (

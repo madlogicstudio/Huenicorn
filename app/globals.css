@@ -3,19 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #F8F8F6;
+  --background: #FDFDFD;
   --foreground: #171717;
   --primary: #96B4EB;
   --secondary:  #F6E06E;
   --accent: #D789B9;
   --border: #E5E7EB;
+  --card: #FFFFFF;
 }
 
 .dark {
-  --background: #131313;
+  --background: #131413;
   --foreground: #F8F8F6;
   --primary: #96B4EB;
   --border: #374151;
+  --card: #181A19;
 }
 
 @theme inline {
@@ -29,7 +31,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--secondary);
+  color: #1A233A;
 }
 
 .hovered:hover{
@@ -53,7 +60,7 @@ body {
     #F6E06E 50%,
     #D789B9 100%
   );
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 
   padding-bottom: 3px;
   border-bottom: 2px solid var(--secondary);
@@ -121,4 +128,19 @@ body {
 
 .fadeIn{
   animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes idle-float {
+  0%,
+  100% {
+    transform: rotateY(200deg) translateY(0);
+  }
+
+  50% {
+    transform: rotateY(200deg) translateY(-8px);
+  }
+}
+
+.idle-float {
+  animation: idle-float 3s ease-in-out infinite;
 }

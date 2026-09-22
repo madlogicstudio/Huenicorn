@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en" suppressHydrationWarning
       >
-      <body className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} selection h-full antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

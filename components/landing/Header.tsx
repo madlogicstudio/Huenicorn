@@ -38,13 +38,13 @@ function Header() {
 
                     <ThemeToggle />
 
-                    <div className="fadeIn flex items-center gap-2 text-foreground/80 button-hovered border border-foreground/20 px-3 py-2 rounded-full cursor-pointer
+                    <Link href="/signup" className="fadeIn flex items-center gap-2 text-foreground/80 button-hovered border border-foreground/20 px-3 py-2 rounded-full cursor-pointer
                         hover:text-[#5578C9] hover:border-transparent">
                         <span className="font-sans font-semibold text-xs ">
                             Get Started
                         </span>
                         <ArrowRight size={16} className="" />
-                    </div>
+                    </Link>
                     
                 </div>     
 

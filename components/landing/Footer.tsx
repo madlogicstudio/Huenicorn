@@ -33,7 +33,7 @@ export default function Footer() {
     return (
         <footer className="border-t border-foreground/20 bg-card">
 
-            <div className="mx-auto max-w-[1080px] w-full px-6 py-16 lg:px-8">
+            <div className="mx-auto max-w-[1080px] w-full px-3 py-16">
 
                 <div className="grid gap-12 lg:grid-cols-[2fr_1fr_1fr_1fr]">
                 
@@ -56,7 +56,7 @@ export default function Footer() {
                                 "#D789B9",
                                 "#B35D91",
                             ].map((color) => (
-                                <div key={color} className="h-2.5 flex-1" style={{ backgroundColor: color }} />
+                                <div key={color} className="h-3 lg:max-w-[60px] full flex-1" style={{ backgroundColor: color }} />
                             ))}
                         </div>
                         
@@ -130,7 +130,7 @@ export default function Footer() {
             </div>
 
             <div className="border-t border-foreground/20">
-                <div className="mx-auto flex max-w-7xl sm:flex-row flex-col gap-4 px-6 py-6 sm:items-center sm:justify-between lg:px-8">
+                <div className="mx-auto flex max-w-7xl sm:flex-row flex-col gap-4 px-3 py-6 sm:items-center sm:justify-between">
                     
                     <div className="flex flex-col gap-3">
                         <p className="text-sm text-foreground/40">

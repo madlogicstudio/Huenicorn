@@ -21,14 +21,14 @@ export function ThemeToggle() {
     return (
         <div className="p-1 border border-foreground/20 w-20 rounded-full flex flex-row items-center justify-between fadeIn">
             
-            <button className={`${currentTheme === "system" ? "bg-gray-500" : ""} p-1 rounded-full cursor-pointer`}
+            <button className={`${currentTheme === "system" ? "bg-gray-400" : ""} p-1 rounded-full cursor-pointer`}
                 onClick={() => {
                     setTheme("system");
                     setCurrentTheme("system");
                 }}>
                 <MonitorIcon size={14} className="text-foreground/80" />
             </button>
-            <button className={`${currentTheme === "dark" ? "bg-gray-500" : ""} p-1 rounded-full cursor-pointer`}
+            <button className={`${currentTheme === "dark" ? "bg-gray-400" : ""} p-1 rounded-full cursor-pointer`}
                 onClick={() => {
                     setTheme("dark");
                     setCurrentTheme("dark");
