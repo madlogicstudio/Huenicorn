@@ -100,10 +100,10 @@ export default function What() {
                                 
                             </div>
 
-                        </div>
+                            <div className="sm:absolute hidden -bottom-8 -left-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
+                            <div className="sm:absolute hidden -right-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
 
-                        <div className="absolute -bottom-8 -left-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
-                        <div className="absolute -right-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
+                        </div>
 
                     </div>
 

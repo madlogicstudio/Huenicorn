@@ -23,10 +23,10 @@ export default function CTA() {
                 
             <div className="relative max-w-[1080px] w-full flex flex-col items-center justify-between">
 
-                <div className="absolute -bottom-8 -left-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
-                <div className="absolute -right-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
+                <div className="sm:absolute hidden -bottom-8 -left-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
+                <div className="sm:absolute hidden -right-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
 
-                <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#96B4EB]/10 blur-3xl" />
+                <div className="sm:absolute hidden pointer-events-none left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#96B4EB]/10 blur-3xl" />
 
                 <div className="w-full relative">
                     

@@ -32,8 +32,8 @@ function Hero() {
 
             <div className='relative flex-1 lg:flex hidden flex-col items-center justify-center gap-3 rounded-lg bg-[var(--secondary)]/80'>
                 <Image src="/Icon.png" height={320} width={320} alt="Huenicorn-icon" className="cursor-pointer scale-125 idle-float" />
-                <div className="absolute -bottom-8 -right-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
-                <div className="absolute -left-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
+                <div className="sm:absolute hidden -bottom-8 -right-8 -z-10 h-24 w-24 rounded-full bg-[#96B4EB]/30 blur-2xl" />
+                <div className="sm:absolute hidden -left-8 -top-8 -z-10 h-24 w-24 rounded-full bg-[#D789B9]/30 blur-2xl" />
             </div>
 
             <div className='flex-1 w-[80%] lg:hidden flex flex-col items-center justify-center gap-3 rounded-lg bg-[var(--secondary)]/80 my-6'>

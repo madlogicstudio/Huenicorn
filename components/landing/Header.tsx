@@ -14,7 +14,7 @@ function Header() {
             <div className="max-w-[1080px] flex flex-row lg:items-end items-center justify-between w-full">
                 <div className="flex flex-row lg:items-end items-center gap-3">   
                     <Image src="/Icon.png" height={36} width={36} alt="Huenicorn-icon" className="cursor-pointer fadeIn" />
-                    <span className="font-mono font-semibold text-xl cursor-pointer text-foreground/80 hovered fadeIn">Huenicorn</span>
+                    <span className="font-mono font-semibold lg:text-xl text-lg cursor-pointer text-foreground/80 hovered fadeIn">Huenicorn</span>
                 </div>
 
                 <div className="lg:flex hidden flex-row items-end gap-6">
