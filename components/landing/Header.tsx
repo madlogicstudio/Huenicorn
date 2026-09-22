@@ -9,12 +9,12 @@ import Link from "next/link"
 function Header() {
 
     return (
-        <section className="w-full flex flex-row items-center justify-center gap-3 p-3 border-b border-[var(--border)] bg-background sticky top-0 z-1">
+        <section className="w-full flex flex-row items-center justify-center gap-3 p-3 border-b border-[var(--border)] bg-background sticky top-0 z-2">
             
             <div className="max-w-[1080px] flex flex-row lg:items-end items-center justify-between w-full">
                 <div className="flex flex-row lg:items-end items-center gap-3">   
                     <Image src="/Icon.png" height={36} width={36} alt="Huenicorn-icon" className="cursor-pointer fadeIn" />
-                    <span className="font-mono font-semibold lg:text-xl text-lg cursor-pointer text-foreground/80 hovered fadeIn">Huenicorn</span>
+                    <Link href="/" className="font-mono font-semibold lg:text-xl text-lg cursor-pointer text-foreground/80 hovered fadeIn">Huenicorn</Link>
                 </div>
 
                 <div className="lg:flex hidden flex-row items-end gap-6">

@@ -31,7 +31,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="border-t border-foreground/20 bg-card">
+        <footer className="flex flex-col border-t border-foreground/20 bg-card items-center">
 
             <div className="mx-auto max-w-[1080px] w-full px-3 py-16">
 
@@ -129,8 +129,8 @@ export default function Footer() {
 
             </div>
 
-            <div className="border-t border-foreground/20">
-                <div className="mx-auto flex max-w-7xl sm:flex-row flex-col gap-4 px-3 py-6 sm:items-center sm:justify-between">
+            <div className="max-w-[1080px] w-full border-t border-foreground/20">
+                <div className="mx-auto flex sm:flex-row flex-col gap-4 px-3 py-6 sm:items-center sm:justify-between">
                     
                     <div className="flex flex-col gap-3">
                         <p className="text-sm text-foreground/40">
