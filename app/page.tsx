@@ -25,6 +25,7 @@ function page() {
 
   return (
     <div className="w-full flex flex-col items-center">
+      
       <Header />
       <Hero />
       <What />

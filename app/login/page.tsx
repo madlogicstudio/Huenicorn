@@ -63,12 +63,7 @@ export default function LoginPage() {
                                 Continue where you left off.
                             </p>
 
-                            <Image
-                                src="/images/Login.png"
-                                width={240}
-                                height={240}
-                                alt="Huenicorn"
-                                className="relative z-10 h-auto lg:hidden my-6"
+                            <Image src="/images/Login.png" width={320} height={320} alt="Huenicorn" className="relative z-10 h-auto lg:hidden my-6"
                             />
 
                         </div>
