@@ -24,11 +24,11 @@ function ProfileCard({image, username}: HeaderProps) {
     };
 
     return (
-        <div className="relative flex flex-col gap-3">
+        <div className="relative flex flex-col lg:w-auto w-full lg:items-start items-center gap-3">
             
             {image? 
                 <div className={`${isActive ? "border-2 border-foreground/20 transition duration-300 ease-in-out" : ""}
-                    flex items-center justify-center h-9 w-9 dark:bg-foreground/10 bg-foreground/10 rounded-full overflow-hidden cursor-pointer`}
+                    lg:flex hidden items-center justify-center h-8 w-8 dark:bg-foreground/10 bg-foreground/10 rounded-full overflow-hidden cursor-pointer`}
                     onClick={() => setIsActive((prev) => !prev)}>
                     {image}
                 </div>
@@ -69,6 +69,29 @@ function ProfileCard({image, username}: HeaderProps) {
                     onClick={handleSignOut}>Log out</span>
 
             </div>}
+
+
+            <div className="lg:hidden w-full flex flex-col gap-3 items-center justify-center">
+            
+                {image? 
+                    <div className="w-full flex flex-row items-center gap-3 border-b border-foreground/20 p-3">
+                        <div className={`flex items-center justify-center h-10 w-10 dark:bg-foreground/10 bg-foreground/10 rounded-full`}>
+                            {image}
+                        </div>
+                        <span className="text-md text-foreground/80">{username}</span> 
+                        <div className="ml-auto cursor-pointer"
+                            onClick={() => alert("Edit icon")}>
+                            <EditIcon className=" h-4 w-4 text-[var(--primary)]" />
+                        </div>
+                    </div>
+                        : 
+                    <div className="h-8 w-8 dark:bg-foreground/10 bg-foreground/10 p-2 rounded-full cursor-pointer"
+                        onClick={() => setIsActive((prev) => !prev)}>
+                        <UserIcon className={`size-5 text-foreground/60`} />
+                    </div>
+                }
+
+            </div>
 
         </div>
     )
