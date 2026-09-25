@@ -7,7 +7,7 @@ import { User } from "@supabase/supabase-js"
 import { getCurrentUser } from "@/lib/supabase/user";
 import { useRouter } from "next/navigation";
 import SideNav from "./components/SideNav";
-import { FreeColorPicker } from "../free-tools/components/FreeColorPicker";
+import { ColorPicker } from "./components/ColorPicker";
 import { FreeColorPalette } from "../free-tools/components/FreeColorPalette";
 import FreeImageColorPicker from "../free-tools/components/FreeImageColorPicker";
 
@@ -68,11 +68,11 @@ function page() {
                 
                 <Header user={user} activeTab={activeTab} setActiveTab={setActiveTab} />
 
-                <div className="min-h-full w-full flex flex-row gap-6">
+                <div className="lg:h-screen h-full w-full flex flex-row gap-6">
                     <SideNav activeTab={activeTab} setActiveTab={setActiveTab} />
 
-                    <div className="w-full flex flex-col">
-                        {activeTab === "color-picker" && <FreeColorPicker />}
+                    <div className="w-full flex flex-col overflow-y-auto hide-scrollbar">
+                        {activeTab === "color-picker" && <ColorPicker />}
                         {activeTab === "palette-generator" && <FreeColorPalette />}
                         {activeTab === "image-color-picker" && <FreeImageColorPicker />}
                     </div>

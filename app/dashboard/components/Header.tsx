@@ -55,12 +55,12 @@ function Header({user, activeTab, setActiveTab}: HeaderProps) {
 
             </div>
 
-            <div ref={menuRef} className={`w-full h-screen lg:hidden flex flex-col items-start justify-start
-                bg-[var(--background)] fixed top-0 left-0 transition-transform duration-300
+            <div ref={menuRef} className={`md:max-w-[320px] w-full h-screen lg:hidden flex flex-col items-start justify-start
+                bg-[var(--background)] fixed top-0 right-0 transition-transform duration-300
                 ${isOpen ? "translate-x-0" : "-translate-x-full"}
                 ${!isOpen ? "translate-x-full" : "-translate-x-0"}`}>
                 
-                <div className="w-full flex flex-row items-center gap-3 py-4 px-3 border-b border-foreground/20">
+                <div className="w-full flex flex-row items-center gap-3 py-3.5 px-3 border-b border-foreground/20">
                     <ThemeToggle />
                     <X className="ml-auto h-6 w-6 cursor-pointer hovered" onClick={() => setIsOpen(false)}/>
                 </div>
