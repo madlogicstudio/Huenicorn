@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Eye, EyeOff, ArrowRight } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function SignupPage() {
     const supabase = createClient();
@@ -78,6 +79,8 @@ export default function SignupPage() {
 
         return () => subscription.unsubscribe();
     }, []);
+
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
     return (
         <main className="font-sans min-h-screen w-full bg-background">
@@ -233,7 +236,11 @@ export default function SignupPage() {
                             By creating an account, you agree to use Huenicorn
                             responsibly and keep your account information secure.
                         </p>
-
+                        
+                        <Turnstile
+                            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                            onSuccess={(token) => setCaptchaToken(token)} 
+                        />
 
                         <button
                             type="submit"

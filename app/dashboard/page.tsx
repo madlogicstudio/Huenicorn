@@ -8,8 +8,10 @@ import { getCurrentUser } from "@/lib/supabase/user";
 import { useRouter } from "next/navigation";
 import SideNav from "./components/SideNav";
 import { ColorPicker } from "./components/ColorPicker";
-import { FreeColorPalette } from "../free-tools/components/FreeColorPalette";
+import { ColorPalette } from "./components/ColorPalette";
 import FreeImageColorPicker from "../free-tools/components/FreeImageColorPicker";
+import { request } from "http";
+import { NextResponse } from "next/server";
 
 export type ActiveTab =
     | "color-picker"
@@ -29,34 +31,26 @@ function page() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState<User | null>(null);
-    const [activeTab, setActiveTab] = useState<ActiveTab>("color-picker");
+    const [activeTab, setActiveTab] = useState<ActiveTab>("palette-generator");
     const router = useRouter();
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1000)
-    }, []);
-
-    useEffect(() => {
-
+   useEffect(() => {
         const loadUser = async () => {
             const currentUser = await getCurrentUser();
 
-            if (!currentUser) {
-                router.push("/")
-                return;
+            if (currentUser) {
+                console.log("Current user:", currentUser);
+                setUser(currentUser);
             }
 
-            console.log("Current user:", currentUser);
-            
-            setUser(currentUser);
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 1000);
         };
 
         loadUser();
-
     }, []);
-
+    
     if (isLoading) return (
         <Loading />
     )
@@ -73,7 +67,7 @@ function page() {
 
                     <div className="w-full flex flex-col overflow-y-auto hide-scrollbar">
                         {activeTab === "color-picker" && <ColorPicker />}
-                        {activeTab === "palette-generator" && <FreeColorPalette />}
+                        {activeTab === "palette-generator" && <ColorPalette />}
                         {activeTab === "image-color-picker" && <FreeImageColorPicker />}
                     </div>
 

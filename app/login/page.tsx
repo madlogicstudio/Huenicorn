@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Eye, EyeOff, ArrowRight, Palette } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function LoginPage() {
     const supabase = createClient();
@@ -40,6 +41,8 @@ export default function LoginPage() {
 
         window.location.href = "/dashboard";
     };
+
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
     return (
         <main className="font-sans min-h-screen w-full bg-background">
@@ -143,6 +146,11 @@ export default function LoginPage() {
                                 </div>
 
                             </div>
+
+                            <Turnstile
+                                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                                onSuccess={(token) => setCaptchaToken(token)} 
+                            />
 
                             <button type="submit" disabled={loading}
                                 className="group flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-[var(--primary)] transition duration-300 ease-in-out
