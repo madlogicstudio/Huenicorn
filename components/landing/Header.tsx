@@ -6,6 +6,7 @@ import { ArrowRight, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState, useRef } from "react"
 import { usePathname } from "next/navigation"
+import { MenuIcon } from "../ui/MenuIcon"
 
 function Header() {
 
@@ -56,27 +57,22 @@ function Header() {
                 </div>     
 
                 <div className="lg:hidden flex flex-row items-center fadeIn"
-                    onClick={() => setIsOpen(true)}>
-                    <Menu size={22} className="text-foreground" />
+                    onClick={() => setIsOpen((prev) => !prev)}>
+                    <MenuIcon isOpen={isOpen} size={22} className="text-foreground"/>
                 </div> 
 
             </div>
 
             <div ref={menuRef} className={`w-full h-screen lg:hidden flex flex-col items-start justify-start gap-3 
-                bg-[var(--background)] fixed top-0 left-0 transition-transform duration-300
+                bg-[var(--background)] fixed top-12 left-0 transition-transform duration-300
                 ${isOpen ? "translate-x-0" : "-translate-x-full"}
                 ${!isOpen ? "translate-x-full" : "-translate-x-0"}`}>
                 
-                <div className="w-full flex flex-row items-center gap-3 py-4 px-3">
-                    <Image src="/Icon.png" height={32} width={32} alt="" className="cursor-pointer"/>
-                    <Link href="/" className="font-mono font-semibold lg:text-xl text-lg cursor-pointer text-foreground/80 hovered fadeIn">Huenicorn</Link>   
-                    <div className="ml-auto flex flex-row items-center gap-3">
+                <div className="w-full flex flex-col items-start py-4 px-3">
+                    <div className="my-3">
                         <ThemeToggle />
-                        <X className="h-6 w-6 cursor-pointer hovered" onClick={() => setIsOpen(false)}/>
-                    </div> 
-                </div>
-                
-                <div className="w-full flex flex-col items-center py-4 px-3">
+                    </div>
+                    
                     <Link href="/features" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Features</Link> 
                     <Link href="/free-tools" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Tools</Link> 
                     <Link href="/about" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">About</Link>

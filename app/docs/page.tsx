@@ -29,7 +29,7 @@ function page() {
                     {isActive}
                 </div>
 
-                {isOpen && <MobileSideNav setIsActive={setIsActive} isActive={isActive} setIsOpen={setIsOpen} />}
+                {<MobileSideNav setIsActive={setIsActive} isActive={isActive} isOpen={isOpen} setIsOpen={setIsOpen} />}
 
                 <div className="w-full sm:flex hidden flex-row gap-3">
                     <SideNav setIsActive={setIsActive} isActive={isActive} />

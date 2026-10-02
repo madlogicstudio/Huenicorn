@@ -5,12 +5,16 @@ import { ArrowRight } from "lucide-react"
 type SideNavProps = {
     setIsActive: React.Dispatch<React.SetStateAction<string>>;
     isActive: string;
+    isOpen: boolean;
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function MobileSideNav({isActive, setIsActive, setIsOpen}: SideNavProps) {
+function MobileSideNav({isActive, setIsActive, isOpen, setIsOpen}: SideNavProps) {
     return (
-        <div className="h-auto w-full px-2 my-3 sm:hidden flex flex-col gap-2 bg-background border-b border-foreground/20 text-md shadow-xl pb-6 absolute top-12 left-0">
+        <div className={`h-auto w-full px-2 my-3 sm:hidden flex flex-col gap-2 bg-background border-b border-foreground/20 text-md shadow-xl pb-6
+            absolute top-12 left-0 transition-transform duration-300
+            ${isOpen ? "translate-x-0" : "-translate-x-full"}
+            `}>
 
             <span className="w-full text-foreground/80 text-lg font-semibold">Getting Started</span>
 
