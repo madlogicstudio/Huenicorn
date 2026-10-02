@@ -24,19 +24,19 @@ function Header() {
 
                 <div className="lg:flex hidden flex-row items-end gap-6">
                     <Link href="/features" className={`${pathname === "/features" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
-                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
+                        font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Features
                     </Link>
                     <Link href="/free-tools" className={`${pathname === "/free-tools" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
-                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
+                        font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Tools
                     </Link>
                     <Link href="/about" className={`${pathname === "/about" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
-                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
+                        font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         About
                     </Link>
                     <Link href="/docs" className={`${pathname === "/docs" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
-                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
+                        font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Docs
                     </Link>
                 </div>
