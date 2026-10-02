@@ -5,11 +5,13 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle"
 import { ArrowRight, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState, useRef } from "react"
+import { usePathname } from "next/navigation"
 
 function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
+    const pathname = usePathname();
 
     return (
         <section className="font-sans w-full flex flex-row items-center justify-center gap-3 p-3 border-b border-[var(--border)] bg-background sticky top-0 z-10">
@@ -21,16 +23,20 @@ function Header() {
                 </div>
 
                 <div className="lg:flex hidden flex-row items-end gap-6">
-                    <Link href="/features" className="font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn">
+                    <Link href="/features" className={`${pathname === "/features" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
+                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Features
                     </Link>
-                    <Link href="/tools" className="font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn">
+                    <Link href="/free-tools" className={`${pathname === "/free-tools" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
+                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Tools
                     </Link>
-                    <Link href="/about" className="font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn">
+                    <Link href="/about" className={`${pathname === "/about" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
+                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         About
                     </Link>
-                    <Link href="/docs" className="font-mono font-semibold text-sm cursor-pointer text-foreground/80 header-hovered fadeIn">
+                    <Link href="/docs" className={`${pathname === "/docs" ? "rainbow-text border-b-2 border-[var(--secondary)] pb-1" : ""}
+                        font-mono font-semibold text-md cursor-pointer text-foreground/80 header-hovered fadeIn`}>
                         Docs
                     </Link>
                 </div>
@@ -71,10 +77,10 @@ function Header() {
                 </div>
                 
                 <div className="w-full flex flex-col items-center py-4 px-3">
-                    <span className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">How It Works</span> 
-                    <span className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Docs</span> 
-                    <span className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">About</span>
-                    <span className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Contact</span>  
+                    <Link href="/features" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Features</Link> 
+                    <Link href="/free-tools" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Tools</Link> 
+                    <Link href="/about" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">About</Link>
+                    <Link href="/docs" className="font-sans text-md cursor-pointer hovered border-b border-foreground/20 p-3 w-full text-foreground/80">Docs</Link>  
                 </div>
 
                 <div className="w-full bg-[var(--dark)] mt-auto flex flex-row items-center gap-3 justify-between py-4 px-3">

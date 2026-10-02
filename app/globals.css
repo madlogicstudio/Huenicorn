@@ -39,6 +39,10 @@ body {
   color: #1A233A;
 }
 
+.transition{
+  transition: 0.3s ease-in-out;
+}
+
 .hovered:hover{
   background: linear-gradient(
     110deg,

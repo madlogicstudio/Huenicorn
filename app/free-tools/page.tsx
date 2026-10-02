@@ -15,15 +15,16 @@ function page() {
     return (
         <div className="font-sans w-full flex flex-col items-center">
             <Header />  
-            <div className="max-w-[1080px] w-full">
+            <div className="max-w-[1080px] w-full mt-3">
 
-                <div className="flex flex-col gap-3 px-3 pt-6 pb-3">
+                <div className="flex flex-col gap-6 px-3 pt-6 pb-3">
+                    <span className="uppercase tracking-[0.3em] text-sm font-semibold hovered">Tools</span>
                     <div className='flex lg:flex-row flex-col gap-3'>
                         <span className="fadeIn font-sans font-bold text-4xl text-left cursor-pointer text-foreground hovered">Your Colors</span>
                         <span className="fadeIn font-sans font-bold text-4xl text-left cursor-pointer rainbow-text">Simplified</span>
                     </div>
                     
-                    <span className="fadeIn flex font-sans font-semibold text-md text-left cursor-pointer text-foreground/60 hovered">
+                    <span className="fadeIn flex font-sans sm:text-lg text-md text-left cursor-pointer text-foreground/60 hovered">
                         Generate palettes, extract colors, convert formats, check accessibility,  and build CSS-ready color tools.   
                     </span>
                 </div>
