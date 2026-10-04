@@ -226,6 +226,58 @@ function HexToHsl() {
                         </div>
 
                     </div>
+
+                    {/* RESULT */}
+                    <div className="h-full w-full flex flex-row gap-3 mt-6 mb-12">
+
+                        <div
+                            className="h-30 w-30 border border-foreground/20"
+                            style={{
+                                backgroundColor: hexInput,
+                            }}
+                        />
+
+                        <div className="flex flex-col justify-center gap-3 border border-foreground/10 px-6 py-3 lg:min-w-[300px] bg-background">
+
+                            <span className="text-sm text-foreground/60">
+                                HSL
+                            </span>
+
+                            <div className="flex sm:flex-row flex-col sm:items-center items-start justify-between gap-4">
+
+                                <span className="font-mono sm:text-lg text-sm">
+                                    {hsl
+                                        ? `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
+                                        : "Invalid HEX"}
+                                </span>
+
+                                <button
+                                    type="button"
+                                    onClick={copyHsl}
+                                    title="Copy HSL"
+                                    disabled={!hsl}
+                                    className="text-foreground/50 hover:text-[var(--secondary)] transition cursor-pointer disabled:opacity-30"
+                                >
+                                    {copied ? (
+                                        <Check
+                                            size={20}
+                                            className="text-green-500"
+                                        />
+                                    ) : (
+                                        <Copy size={20} />
+                                    )}
+                                </button>
+
+                            </div>
+
+                            <span className="font-mono text-sm text-foreground/50">
+                                {hexInput.toUpperCase()}
+                            </span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
                 {/* HSL SLIDERS */}
@@ -322,57 +374,6 @@ function HexToHsl() {
                         </div>
 
                     </div>
-                </div>
-
-            </div>
-
-            {/* RESULT */}
-            <div className="h-full w-full flex flex-row gap-3 mt-6 mb-12">
-
-                <div
-                    className="h-30 w-30 border border-foreground/20"
-                    style={{
-                        backgroundColor: hexInput,
-                    }}
-                />
-
-                <div className="flex flex-col justify-center gap-3 border border-foreground/10 px-6 py-3 lg:min-w-[300px] bg-background">
-
-                    <span className="text-sm text-foreground/60">
-                        HSL
-                    </span>
-
-                    <div className="flex sm:flex-row flex-col sm:items-center items-start justify-between gap-4">
-
-                        <span className="font-mono sm:text-lg text-sm">
-                            {hsl
-                                ? `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
-                                : "Invalid HEX"}
-                        </span>
-
-                        <button
-                            type="button"
-                            onClick={copyHsl}
-                            title="Copy HSL"
-                            disabled={!hsl}
-                            className="text-foreground/50 hover:text-[var(--secondary)] transition cursor-pointer disabled:opacity-30"
-                        >
-                            {copied ? (
-                                <Check
-                                    size={20}
-                                    className="text-green-500"
-                                />
-                            ) : (
-                                <Copy size={20} />
-                            )}
-                        </button>
-
-                    </div>
-
-                    <span className="font-mono text-sm text-foreground/50">
-                        {hexInput.toUpperCase()}
-                    </span>
-
                 </div>
 
             </div>

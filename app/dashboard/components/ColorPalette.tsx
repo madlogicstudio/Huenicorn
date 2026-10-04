@@ -349,7 +349,7 @@ export const ColorPalette = () => {
 
                     <div className="w-full flex flex-row my-3">   
                         <input type="text" placeholder="Describe what color palette you wanted to create..." 
-                            className="text-sm text-foreground/80 p-3 outline-none border border-foreground/20 flex-1 bg-[var(--card)]"
+                            className="text-md text-foreground/80 p-3 outline-none border border-foreground/20 flex-1 bg-[var(--card)]"
                             value={palettePrompt}
                             onChange={(e) => setPalettePrompt(e.target.value)}/>
                         <button className="text-sm text-foreground/80 font-semibold px-4 py-2 bg-[var(--primary)] cursor-pointer"
@@ -381,12 +381,12 @@ export const ColorPalette = () => {
                     }
 
                     {paletteDescription && !loading && (
-                        <div className="mt-6 w-full border border-foreground/10 bg-[var(--card)] p-5">
-                            <h3 className="text-sm font-semibold text-foreground">
+                        <div className="font-sans mt-6 w-full border border-foreground/10 bg-[var(--card)] p-5">
+                            <h3 className="text-md font-semibold text-foreground">
                                 About this palette
                             </h3>
 
-                            <p className="mt-2 text-sm leading-6 text-foreground/60">
+                            <p className="mt-2 text-md leading-6 text-foreground/60">
                                 {paletteDescription}
                             </p>
                         </div>

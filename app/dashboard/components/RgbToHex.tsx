@@ -291,7 +291,7 @@ function RgbToHex() {
                                         onClick={increaseBlue}
                                         className="text-foreground/50 transition-colors hover:text-foreground"
                                     >
-                                        <SquareChevronUp size={20} />
+                                        <SquareChevronUp size={20} className="cursor-pointer"/>
                                     </button>
 
                                     <button
@@ -299,7 +299,7 @@ function RgbToHex() {
                                         onClick={decreaseBlue}
                                         className="text-foreground/50 transition-colors hover:text-foreground"
                                     >
-                                        <SquareChevronDown size={20} />
+                                        <SquareChevronDown size={20} className="cursor-pointer"/>
                                     </button>
 
                                 </div>

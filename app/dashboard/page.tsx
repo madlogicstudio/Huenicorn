@@ -13,6 +13,8 @@ import ImageColorPicker from "./components/ImageColorPicker";
 import RgbToHex from "./components/RgbToHex";
 import HexToHsl from "./components/HexToHsl";
 import CssColorConverter from "./components/CssColorConverter";
+import ShadesTints from "./components/ShadesTints";
+import GradientGenerator from "./components/GradientGenerator"
 import { request } from "http";
 import { NextResponse } from "next/server";
 
@@ -34,7 +36,7 @@ function page() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState<User | null>(null);
-    const [activeTab, setActiveTab] = useState<ActiveTab>("rgb-hex");
+    const [activeTab, setActiveTab] = useState<ActiveTab>("gradient-generator");
     const router = useRouter();
 
    useEffect(() => {
@@ -75,6 +77,8 @@ function page() {
                         {activeTab === "rgb-hex" && <RgbToHex />}
                         {activeTab === "hex-hsl" && <HexToHsl />}
                         {activeTab === "css-color-converter" && <CssColorConverter />}
+                        {activeTab === "shades-tints" && <ShadesTints />}
+                        {activeTab === "gradient-generator" && <GradientGenerator />}
                     </div>
 
                 </div>
