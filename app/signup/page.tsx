@@ -37,6 +37,11 @@ export default function SignupPage() {
             return;
         }
 
+        if(!captchaToken) {
+            setError("Captcha failed. Try again later.")
+            return;
+        }
+
         setLoading(true);
 
         const { data, error } = await supabase.auth.signUp({

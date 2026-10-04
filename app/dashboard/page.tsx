@@ -9,7 +9,10 @@ import { useRouter } from "next/navigation";
 import SideNav from "./components/SideNav";
 import { ColorPicker } from "./components/ColorPicker";
 import { ColorPalette } from "./components/ColorPalette";
-import FreeImageColorPicker from "../free-tools/components/FreeImageColorPicker";
+import ImageColorPicker from "./components/ImageColorPicker";
+import RgbToHex from "./components/RgbToHex";
+import HexToHsl from "./components/HexToHsl";
+import CssColorConverter from "./components/CssColorConverter";
 import { request } from "http";
 import { NextResponse } from "next/server";
 
@@ -31,7 +34,7 @@ function page() {
 
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState<User | null>(null);
-    const [activeTab, setActiveTab] = useState<ActiveTab>("palette-generator");
+    const [activeTab, setActiveTab] = useState<ActiveTab>("rgb-hex");
     const router = useRouter();
 
    useEffect(() => {
@@ -68,7 +71,10 @@ function page() {
                     <div className="w-full flex flex-col overflow-y-auto hide-scrollbar">
                         {activeTab === "color-picker" && <ColorPicker />}
                         {activeTab === "palette-generator" && <ColorPalette />}
-                        {activeTab === "image-color-picker" && <FreeImageColorPicker />}
+                        {activeTab === "image-color-picker" && <ImageColorPicker />}
+                        {activeTab === "rgb-hex" && <RgbToHex />}
+                        {activeTab === "hex-hsl" && <HexToHsl />}
+                        {activeTab === "css-color-converter" && <CssColorConverter />}
                     </div>
 
                 </div>

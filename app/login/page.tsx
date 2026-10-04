@@ -37,6 +37,11 @@ export default function LoginPage() {
             return;
         }
 
+        if (!captchaToken) {
+            setError("Captcha failed. Try again later.");
+            return;
+        }
+
         setSuccess("Login successful! Redirecting...");
 
         window.location.href = "/dashboard";

@@ -74,93 +74,93 @@ function Header({user, activeTab, setActiveTab}: HeaderProps) {
                     <div className="font-sans w-full flex flex-col gap-2 py-3">
                         <p className="uppercase text-xs font-semibold pb-2">Main Tools</p>
                         <span className={`${activeTab === "color-picker" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("color-picker"); 
                                 setIsOpen(false);
-                            }}><Pipette size={18} />Color Picker</span>
+                            }}><Pipette size={24} />Color Picker</span>
                         <span className={`${activeTab === "palette-generator" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("palette-generator");
                                 setIsOpen(false);
-                            }}><Palette size={18} />Palette Generator</span>
+                            }}><Palette size={24} />Palette Generator</span>
                         <span className={`${activeTab === "image-color-picker" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("image-color-picker");
                                 setIsOpen(false);
-                            }}><ImageIcon size={18} />Image Color Picker</span>    
+                            }}><ImageIcon size={24} />Image Color Picker</span>    
                     </div>
 
                     <div className="font-sans w-full flex flex-col gap-2 py-3">
                         <p className="uppercase text-xs font-semibold pb-2">Convert</p>
                         <span className={`${activeTab === "rgb-hex" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("rgb-hex");
                                 setIsOpen(false);
-                            }}><Repeat2 size={18} />RGB <ArrowRight size={12} /> HEX</span>
+                            }}><Repeat2 size={24} />RGB <ArrowRight size={12} /> HEX</span>
                         <span className={`${activeTab === "hex-hsl" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("hex-hsl");
                                 setIsOpen(false);
-                            }}><Repeat2 size={18} />HEX <ArrowRight size={12} /> HSL</span>
+                            }}><Repeat2 size={24} />HEX <ArrowRight size={12} /> HSL</span>
                         <span className={`${activeTab === "css-color-converter" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("css-color-converter");
                                 setIsOpen(false);
-                            }}><SwatchBook size={18} />CSS Color Converter</span>    
+                            }}><SwatchBook size={24} />CSS Color Converter</span>    
                     </div>
 
                     <div className="font-sans w-full flex flex-col gap-2 py-3">
                         <p className="uppercase text-xs font-semibold pb-2">Generate</p>
                         <span className={`${activeTab === "shades-tints" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("shades-tints");
                                 setIsOpen(false);
-                            }}><Eclipse size={18} />Shades & Tints</span>
+                            }}><Eclipse size={24} />Shades & Tints</span>
                         <span className={`${activeTab === "gradient-generator" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("gradient-generator");
                                 setIsOpen(false);
-                            }}><Blend size={18} />Gradient Generator</span>
+                            }}><Blend size={24} />Gradient Generator</span>
                         <span className={`${activeTab === "random-color" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("random-color");
                                 setIsOpen(false);
-                            }}><Paintbrush size={18} />Random Color</span>    
+                            }}><Paintbrush size={24} />Random Color</span>    
                     </div>
 
                     <div className="font-sans w-full flex flex-col gap-2 py-3">
                         <p className="uppercase text-xs font-semibold pb-2">Extract</p>
                         <span className={`${activeTab === "image-palette-extractor" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("image-palette-extractor");
                                 setIsOpen(false);
-                            }}><ImageDown size={18} />Image Palette Extractor</span>   
+                            }}><ImageDown size={24} />Image Palette Extractor</span>   
                     </div>
 
                     <div className="font-sans w-full flex flex-col gap-2 py-3">
                         <p className="uppercase text-xs font-semibold pb-2">Accessibility</p>
                         <span className={`${activeTab === "contrast-checker" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("contrast-checker");
                                 setIsOpen(false);
-                            }}><Eclipse size={18} />Contrast Checker</span>
+                            }}><Eclipse size={24} />Contrast Checker</span>
                         <span className={`${activeTab === "color-blindness-simulator" ? "bg-[var(--secondary)]/60 dark:bg-[var(--primary)]/80" : ""}
-                            group flex items-center gap-2 px-3 py-2 rounded-md text-foreground/80 text-sm cursor-pointer`}
+                            group flex items-center gap-3 px-3 py-2 rounded-md text-foreground/80 text-md cursor-pointer`}
                             onClick={() => {
                                 setActiveTab("color-blindness-simulator");
                                 setIsOpen(false);
-                            }}><Blend size={18} />Color Blindness Simulator</span>
+                            }}><Blend size={24} />Color Blindness Simulator</span>
                     </div>
 
                 </div>

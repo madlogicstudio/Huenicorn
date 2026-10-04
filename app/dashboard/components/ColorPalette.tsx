@@ -197,7 +197,7 @@ export const ColorPalette = () => {
     return (
         <div className="font-sans flex flex-col bg-[var(--card)] lg:p-6 p-3 rounded-lg gap-6 lg:my-6">
 
-            <div className="relative flex flex-row items-start justify-between">
+            <div className="relative flex flex-row items-start justify-between my-3">
                 <span className="text-foreground text-3xl">
                     Color Palette Generator
                 </span>
@@ -207,32 +207,73 @@ export const ColorPalette = () => {
                             transition duration-300 ease" 
                             onMouseEnter={() => setShowTutorial("palette-generator")} onMouseLeave={() => setShowTutorial("")}/>
                     </div>
-                    {showTutorial === "palette-generator" && 
-                        <InfoCard content={
-                            <>
-                                <span className="group text-sm">
-                                    1. <span className=" font-semibold">Choose a Color</span> -  
-                                    <span className="ml-2">Click anywhere on the color picker to select the color you want.</span>
-                                </span>
-                                <span className="group text-sm">
-                                    2. <span className=" font-semibold">Fine-Tune Your Color</span> -  
-                                    <span className="ml-2">Drag around the color area and hue bar to find the perfect shade.</span>
-                                </span>
-                                <span className="group text-sm">
-                                    3. <span className=" font-semibold">Check the Color Values</span> -  
-                                    <span className="ml-2">Your selected color will automatically display its HEX and RGB values.</span>
-                                </span>
-                                <span className="group text-sm">
-                                    4. <span className=" font-semibold">Copy the Color Code</span> -  
-                                    <span className="ml-2">Click the copy button beside the HEX or RGB value to copy it to your clipboard.</span>
-                                </span>
-                                <span className="group text-sm">
-                                    5. <span className=" font-semibold">Try the Color Sampler</span> -  
-                                    <span className="ml-2">Select from the preset color samples below the picker to quickly explore different shades.</span>
-                                </span>
-                            </>
-                        }
-                    />}
+                    {showTutorial === "palette-generator" && (
+                        <InfoCard
+                            content={
+                                <>
+                                    <span className="group text-sm">
+                                        1.{" "}
+                                        <span className="font-semibold">
+                                            Generate a Palette
+                                        </span>{" "}
+                                        -{" "}
+                                        <span className="ml-2">
+                                            Click the Generate button to create a new color
+                                            palette.
+                                        </span>
+                                    </span>
+
+                                    <span className="group text-sm">
+                                        2.{" "}
+                                        <span className="font-semibold">
+                                            Explore the Colors
+                                        </span>{" "}
+                                        -{" "}
+                                        <span className="ml-2">
+                                            Browse the generated colors and see how they work
+                                            together as a palette.
+                                        </span>
+                                    </span>
+
+                                    <span className="group text-sm">
+                                        3.{" "}
+                                        <span className="font-semibold">
+                                            Copy a Color
+                                        </span>{" "}
+                                        -{" "}
+                                        <span className="ml-2">
+                                            Click the copy button beside any HEX value to copy
+                                            that color to your clipboard.
+                                        </span>
+                                    </span>
+
+                                    <span className="group text-sm">
+                                        4.{" "}
+                                        <span className="font-semibold">
+                                            Generate Again
+                                        </span>{" "}
+                                        -{" "}
+                                        <span className="ml-2">
+                                            Click Generate again whenever you want a completely
+                                            new palette.
+                                        </span>
+                                    </span>
+
+                                    <span className="group text-sm">
+                                        5.{" "}
+                                        <span className="font-semibold">
+                                            Try AI Palette Generator
+                                        </span>{" "}
+                                        -{" "}
+                                        <span className="ml-2">
+                                            Describe the colors or mood you want and let AI
+                                            create a custom palette for you.
+                                        </span>
+                                    </span>
+                                </>
+                            }
+                        />
+                    )}
                     <SquareArrowOutUpRight onClick={handleShare} className="text-[var(--primary)] hover:text-[var(--secondary)] size-6 cursor-pointer
                         transition duration-300 ease" />
                 </div>
